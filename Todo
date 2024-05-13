@@ -1,0 +1,4 @@
+Set up sccs (mixin, colors and index.scss)
+export icons from figma as svg and save them in the Icon folder in assets folder
+Also import colors into the _colors.scss file
+set up files in the components folder 
