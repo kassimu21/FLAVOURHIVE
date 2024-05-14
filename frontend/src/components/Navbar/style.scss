@@ -1,0 +1,37 @@
+@use '../../styles/index' as *;
+
+.nav_wrapper{
+    width: 100%;
+    height: auto;
+    // border-bottom: 0.5px solid var(--grey01);
+    // border-bottom: 0.5px solid grey;
+    padding: 25px 0;
+    .nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+    }
+    .logo{
+        // width: 40%;
+    }
+    .menu_links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .links{
+            display: flex;
+            gap: 1rem;
+            a{
+                font-size: 16px;
+                text-transform: uppercase;
+                font-family: Arial, Helvetica, sans-serif;
+                color: black;
+                font-weight: 700;
+                line-height: 22px;
+                cursor: pointer;
+            }
+        }
+    }
+}

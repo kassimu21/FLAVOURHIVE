@@ -1,0 +1,58 @@
+@use '../../../styles/index';
+
+.pd_recipes {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+
+    .img_headar {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    .recipe_flex {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        .card {
+            width: 380px !important;
+            height: 535px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            border: 0.5px solid rgb(173, 173, 173);
+            box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            -webkit-box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            -moz-box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            .upper{
+                height: 50%;
+            }
+            .lower{
+                margin-top: 2rem;
+                .name{
+                    font-size: 24px;
+                    font-weight: 500;
+                    line-height: 28px;
+                    text-decoration: underline;
+                    text-align: center;
+                }
+                .desc{
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 32px;
+                    color: #9ca5ab;
+                    text-align: center;
+                }
+            }
+            img {
+                height: auto;
+                width: auto;
+            }
+        }
+    }
+}
