@@ -1,0 +1,23 @@
+@use "../../../styles/index" as *;
+.pd_features{
+    h4{
+        text-align: center;
+        color: #C5D6AC;
+        font-size: 18px;
+    }
+    h2{
+        text-align: center;
+    }
+    .hero_flex{
+        gap: 10%;
+        padding: 0;;
+    }
+    .text_box{
+        .inner_flex{
+            display: flex;
+            .wrapper{
+                display: flex;
+            }
+        }
+    }
+}

@@ -16,10 +16,10 @@
             h1{
                 font-size: 62px;
                 line-height: 72px;
-                color: black;
+                color: var(--black01);
                 font-weight: bold;
                 span{
-                    color: red;
+                    color: var(--red);
                 }
             }
             p{
@@ -28,7 +28,7 @@
                 line-height: 28px;
             }
             .general_btn{
-                background-color: #6EB10B;
+                background-color: var(--primary);
                 color: #fff;
                 appearance: none;
                 outline: none;
@@ -41,8 +41,8 @@
                 cursor: pointer;
                 &:hover{
                     background-color: white;
-                    border: 2px solid #6EB10B;
-                    color: #6EB10B;
+                    border: 2px solid var(--primary);
+                    color: var(--primary);
                 }
             }
         }
