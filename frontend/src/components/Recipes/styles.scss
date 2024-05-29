@@ -1,0 +1,58 @@
+.pd_recipe_listing{
+    h2{
+        text-align: center;
+    }
+    .recipe_wrapper{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease-in-out;
+        width: 300px;
+        margin: 20px;
+        padding-top: 30px;
+        cursor: pointer;
+      }
+      
+      .card:hover {
+        transform: scale(1.05);
+      }
+      
+      .upper {
+        height: 200px;
+        overflow: hidden;
+      }
+      
+      .upper img {
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        margin: auto;
+        border-radius: 50%;
+      }
+      
+      .lower {
+        padding: 15px;
+        background-color: #fff;
+      }
+      
+      .lower .name {
+        font-size: 1em;
+        font-weight: bold;
+        margin: 0 0 10px;
+        text-align: center;
+        text-decoration: underline;
+      }
+      
+    
+      
+}

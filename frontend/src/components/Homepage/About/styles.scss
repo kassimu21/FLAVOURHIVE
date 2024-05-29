@@ -1,0 +1,56 @@
+@use "../../../styles/index" as *;
+
+.pd_about{
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    h4{
+        font-size: 28px;
+        font-family: serif;
+        .first{
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        .second{
+            color: var(--primary);
+            text-decoration: underline;
+        }
+    }
+    .title{
+        text-align: center;
+        font-family: serif;
+    }
+    .sub-title{
+        text-align: center;
+    }
+    .general_btn{
+        &.abt_btn{
+            background-color: var(--orange) !important;
+        &:hover{
+            background-color: var(--white) !important;
+            border-color: var(--orange) !important;
+            color: var(--orange) !important;
+        }
+        }
+        
+    }
+    .flex{
+        display: flex;
+        justify-content: space-between;
+        .one, .two,.three{
+            display: flex;
+            flex-direction: column;
+            .sub{
+                font-size: 12px;
+                padding: 0.5rem 0;
+                color: var(--grey01);
+            }
+        }
+        .numbers{
+            color: var(--black01);
+            font-weight: 500;
+            font-size: 34px;
+            font-family: serif;
+        }
+
+    }
+}

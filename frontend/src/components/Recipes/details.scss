@@ -1,0 +1,91 @@
+/* src/components/RecipeDetail.scss */
+
+.recipe-detail {
+    // background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title {
+    color: #7dbd1a;
+  }
+  
+  .recipe-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+  }
+  
+  .details {
+    background-color: #f5c28c;
+    padding: 20px;
+    border-radius: 8px;
+    color: #000;
+  }
+  
+  .details p {
+    margin: 10px 0;
+  }
+  
+  .ingredients, .instructions {
+    // background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .ingredients h3, .instructions h3 {
+    color: #7dbd1a;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .footer h4 {
+    color: #7dbd1a;
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer li {
+    margin-bottom: 5px;
+  }
+  
+  .footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+  
