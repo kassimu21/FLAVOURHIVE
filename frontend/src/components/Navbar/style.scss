@@ -3,15 +3,26 @@
 .nav_wrapper{
     width: 100%;
     height: auto;
-    // border-bottom: 0.5px solid var(--grey01);
-    // border-bottom: 0.5px solid grey;
-    padding: 25px 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: fixed;
+
+    &.d_fixed {
+        background: white;
+        box-shadow: 0 0 2px 0 #ced3da;
+        // padding-top: 25px;
+        z-index: 5;
+      }
     .nav{
         width: 80%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: auto;
+        padding: 0 5%;margin: auto;
+        @include mq(640px){
+            width: 100%;
+        }
+     
     }
     .logo{
         // width: 40%;
@@ -31,7 +42,14 @@
                 font-weight: 700;
                 line-height: 22px;
                 cursor: pointer;
+                text-decoration: none;
             }
         }
+        @include mq(640px){
+            display: none;
+        }
+    }
+    .burger{
+        // display: none;
     }
 }

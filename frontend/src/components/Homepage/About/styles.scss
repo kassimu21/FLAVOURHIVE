@@ -1,11 +1,16 @@
 @use "../../../styles/index" as *;
 
 .pd_about{
-    margin-top: 3rem;
+    padding-top: 4rem;
     flex-wrap: wrap;
+    @include mq(768px){
+        padding-top: 2rem;
+    }
     h4{
         font-size: 28px;
         font-family: serif;
+        margin: 0;
+        padding: 0;
         .first{
             font-weight: 600;
             text-decoration: underline;
@@ -18,9 +23,12 @@
     .title{
         text-align: center;
         font-family: serif;
+        font-size: 50px;
+        padding: 10px 0 ;
     }
     .sub-title{
         text-align: center;
+        font-size: 24px;
     }
     .general_btn{
         &.abt_btn{
@@ -33,24 +41,61 @@
         }
         
     }
-    .flex{
-        display: flex;
-        justify-content: space-between;
-        .one, .two,.three{
+    .team{
+        .team_wrapper{
             display: flex;
-            flex-direction: column;
-            .sub{
-                font-size: 12px;
-                padding: 0.5rem 0;
-                color: var(--grey01);
+            gap: 1rem;
+            @include mq(640px){
+                flex-wrap: wrap;
+                gap: 0;
+            }
+            .card{
+                width: calc(100% / 3);
+                height: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            -webkit-box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            -moz-box-shadow: 6px 6px 5px 3px rgba(235, 229, 229, 0.75);
+            @include mq(640px){
+                width: calc(100% / 2 );
+                gap: 8px;
+            }  
+            @include mq(460px){
+                width: calc(80% );
+                gap: 0;
+                margin: auto;
+            }      
+            .p_img{
+                    width: 140px;
+                    height: 140px;
+                    background-color: bisque;
+                    border-radius: 50%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+                p{
+                    margin: 0; padding: 0;
+                }
+                .name{
+                    color: #1e1e1e;
+                    font-weight: 600;
+                }
+                .role{
+                    color: #594747;
+                    font-weight: 500;
+                    font-style: italic;
+                }
             }
         }
-        .numbers{
-            color: var(--black01);
-            font-weight: 500;
-            font-size: 34px;
-            font-family: serif;
-        }
-
+    }
+    a{
+        color: var(--primary);
+        text-decoration: underline;
     }
 }
