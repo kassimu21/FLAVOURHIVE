@@ -8,6 +8,12 @@ const AboutSection = () => {
     <>
         
         <div className="pd_hero pd_about">
+             <div className="absolut_leaf1">
+          <img src="/images/leaf-hero.png" />
+        </div>
+         <div className="absolut_oil3">
+          <img src="/images/oil.png" />
+        </div>
        <h2 className='title'>About Us</h2>
         <p className='sub-title'>Uncover our story and get new insights about us</p>
             <div className="hero_flex">
@@ -17,7 +23,7 @@ const AboutSection = () => {
                 </div>
                 <div className="text_box">
                     <h4>Welcome to <span className='first'>FLAVOUR</span><span className='second'>HIVE</span></h4>
-                    <p>At FLAVORHIVE, we're not just about recipes; we're about the joy of cooking, the pleasure of sharing meals with loved ones, and the adventure of exploring new flavors.</p>
+                    <p  className='par'>At FLAVORHIVE, we're not just about recipes; we're about the joy of cooking, the pleasure of sharing meals with loved ones, and the adventure of exploring new flavors.</p>
                     <div className="flex">
                         <div className="one">
                             <span className="numbers">400k+</span>
@@ -37,8 +43,8 @@ const AboutSection = () => {
             <div className="hero_flex">
                 <div className="text_box">
                     <h4>OUR VISION</h4>
-                    <p>Our vision began with a simple love for food—a love passed down through generations and fueled by countless hours spent experimenting in the kitchen. Whether you're a seasoned chef or a culinary novice, our goal is to inspire and empower you to create delicious dishes that delight the senses and bring people together.</p>
-                    <button className='general_btn abt_btn'>Get Started</button>
+                    <p className='par'>Our vision began with a simple love for food—a love passed down through generations and fueled by countless hours spent experimenting in the kitchen. Whether you're a seasoned chef or a culinary novice, our goal is to inspire and empower you to create delicious dishes that delight the senses and bring people together.</p>
+                    <button className='general_btn1 abt_btn'>Get Started</button>
                 </div>
                 <div className="img_box">
                     <img src='/images/second-seg.png'/>

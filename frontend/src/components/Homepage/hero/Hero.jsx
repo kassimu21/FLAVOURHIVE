@@ -13,7 +13,7 @@ const Hero = () => {
             <h1>
               Simple and <br /> Tasty <span>Recipes</span>
             </h1>
-            <p>
+            <p className="hero-par">
               A hive where recipes of different <br />
               continental dishes are found
             </p>

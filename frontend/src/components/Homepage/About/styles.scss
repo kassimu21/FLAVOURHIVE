@@ -1,34 +1,82 @@
 @use "../../../styles/index" as *;
 
 .pd_about{
-    margin-top: 3rem;
     flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .absolut_leaf1{
+        position: absolute;
+        left: 0;
+        margin-top: -70%;
+    }
+     .absolut_oil3{
+        position: absolute;
+        right: 0;
+    }
+    .title{
+        margin-top: 0rem;
+        font-size: 45px;
+        font-family: "Lexend Exa";
+        text-align: center;
+        color: black;
+        font-weight: 500;
+        margin-bottom: 0rem;
+    }
+    .sub-title{
+    font-size: 25px;
+    font-family: "Happy monkey";
+    text-align: center;
+    }
     h4{
-        font-size: 28px;
-        font-family: serif;
+        font-size: 30px;
+        font-family: "inter";
+        font-weight: 500;
         .first{
-            font-weight: 600;
             text-decoration: underline;
+            font-family: "Holtwood One Sc";
         }
         .second{
             color: var(--primary);
             text-decoration: underline;
+            font-family: "Holtwood One Sc";
         }
     }
-    .title{
-        text-align: center;
-        font-family: serif;
+    .text_box{
+        .par{
+            font-family: "happy monkey";
+            font-size: 23px;
+            width: 60%;
+            line-height: 40px;
+        }
     }
-    .sub-title{
-        text-align: center;
-    }
-    .general_btn{
+    .general_btn1{
+        font-size: 20px;
+        font-family: "inter";
+        padding: 1.3rem 2rem;
+        color: #fff;
+        margin-top: 4rem;
+        font-weight: 500;
+        border: none;
+        width: 30%;
+        height: 100%;
+        appearance: none;
+        outline: none;
+        border-radius: 2px;
+        cursor: pointer;
         &.abt_btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             background-color: var(--orange) !important;
         &:hover{
-            background-color: var(--white) !important;
-            border-color: var(--orange) !important;
-            color: var(--orange) !important;
+            background-color: #F4DE27 !important;
+            // background-color: var(--white) !important;
+            // border-color: var(--orange) !important;
+            // color: var(--orange) !important;
+            color: #fff;
         }
         }
         
@@ -36,20 +84,25 @@
     .flex{
         display: flex;
         justify-content: space-between;
+        width: 70%;
         .one, .two,.three{
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
             .sub{
-                font-size: 12px;
-                padding: 0.5rem 0;
+                font-family: "inter";
+                font-weight: 600;
+                font-size: 13px;
+                padding: 1rem 0;
                 color: var(--grey01);
             }
         }
         .numbers{
             color: var(--black01);
-            font-weight: 500;
+            font-weight: 600;
             font-size: 34px;
-            font-family: serif;
+            font-family: "inter";
         }
 
     }

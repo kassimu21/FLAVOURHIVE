@@ -21,11 +21,11 @@ const OurRecipes = () => {
   return (
     <>
         <div className="pd_recipes">
-            <h2>Our Recipes</h2>
-            <p className='header'>Fuel your body, delight your palate with the tasteof doofness in every recipe </p>
             <div className="img_headar">
                 <img src='/images/leaf-header.png'/>
             </div>
+             <h2>Our Recipes</h2>
+            <p className='header'>Fuel your body, delight your palate with the taste of doofness in every recipe </p>
             <div className="recipe_flex">
                 {recipes.map((item) => (
                     <div className="card">

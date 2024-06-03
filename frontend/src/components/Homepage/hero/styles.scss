@@ -25,32 +25,36 @@
                 line-height: 72px;
                 color: var(--black01);
                 font-weight: bold;
+                font-family: 'Lexend Exa';
                 span{
                     color: var(--red);
                 }
             }
-            p{
+            .hero-par{
                 color: #9ca5ab;
                 font-size: 20px;
                 line-height: 28px;
+                font-family: 'Lexend Deca';
             }
             .general_btn{
-                background-color: var(--primary);
+                background-color: var(--btngreen);
                 color: #fff;
                 appearance: none;
                 outline: none;
-                font-size: 24px;
+                font-size: 22px;
                 border: 0;
-                width: 350px;
-                height: 60px;
-                border-radius: 8px;
+                width: 60%;
+                height: 100%;
+                font-family: "inter";
+                padding: 1.2rem 3rem;
+                border-radius: 3px;
                 margin-top: 2rem;
                 cursor: pointer;
                 &:hover{
-                    background-color: white;
-                    border: 2px solid var(--primary);
+                    background-color: var(--primary);
+                    
                     a{
-                        color: var(--primary);
+                        color: #fff;
                         
                     }
                 }

@@ -1,22 +1,64 @@
 @use "../../../styles/index" as *;
 .pd_features{
+    margin: 10rem 0px;
+    .absolut_leaf2{
+        position: absolute;
+        right: 0;
+        margin-top: -10%;
+        overflow: hidden;
+    }
+    .absolut_oil3{
+        position: absolute;
+        right: 0;
+    }
     h4{
         text-align: center;
         color: #C5D6AC;
         font-size: 18px;
+        font-family: "Inter";
+        font-weight: 500;
     }
     h2{
         text-align: center;
+        font-family: "Lexend exa";
     }
     .hero_flex{
         gap: 10%;
         padding: 0;;
     }
+    
     .text_box{
         .inner_flex{
             display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             .wrapper{
                 display: flex;
+                 flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .im-fea{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-right: 2rem;
+            }
+            .inner_text{
+
+                h3{
+                    font-family: "inter";
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                p{
+                    font-family: "inter";
+                    font-size: 20px;
+                    color: black;
+                    font-weight: 500;
+                }
             }
         }
     }

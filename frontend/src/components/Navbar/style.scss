@@ -13,9 +13,9 @@
         align-items: center;
         margin: auto;
     }
-    .logo{
-        // width: 40%;
-    }
+    // .logo{
+    //     width: 40%;
+    // }
     .menu_links{
         display: flex;
         justify-content: space-between;
@@ -31,7 +31,25 @@
                 font-weight: 700;
                 line-height: 22px;
                 cursor: pointer;
+                position: relative;
+            }
+            a::after{
+                content: '';
+                width: 0%;
+                height: 3px;
+                background: var(--primary);
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                transition: 0.5s;
+            }
+            a:hover{
+                color: var(--primary);
+            }
+            a:hover::after{
+                width: 100%;
             }
         }
     }
 }
+
