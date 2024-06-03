@@ -1,5 +1,6 @@
-import React from 'react'
-import "./index.scss"
+import React from 'react';
+import "./index.scss";
+import { Link } from "react-router-dom";
 const OurRecipes = () => {
     const recipes = [
         {
@@ -38,6 +39,10 @@ const OurRecipes = () => {
                         </div>
                     </div>
                 ))}
+            </div>
+            <div className='st-but'>
+            <button className="rec-but">
+                <Link to="/recipes" className="a"><a>View More</a></Link></button>
             </div>
         </div>
     </>
