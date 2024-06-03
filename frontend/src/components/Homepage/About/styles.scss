@@ -19,6 +19,10 @@
             color: var(--primary);
             text-decoration: underline;
         }
+        &.feat_header{
+            font-size: 28px;
+            color: #594747;
+        }
     }
     .title{
         text-align: center;
@@ -97,5 +101,8 @@
     a{
         color: var(--primary);
         text-decoration: underline;
+    }
+    img{
+        // max-width: 100%;
     }
 }
