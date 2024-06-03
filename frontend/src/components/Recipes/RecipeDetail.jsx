@@ -2,6 +2,10 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { fetchRecipeById } from "../../API/api";
 import Navbar from "../Navbar";
+import { FiLinkedin } from "react-icons/fi";
+import { FiFacebook } from "react-icons/fi";
+import { FiInstagram } from "react-icons/fi";
+import { FiTwitter } from "react-icons/fi";
 import "./details.scss";
 const RecipeDetail = () => {
   const { id } = useParams();
@@ -69,31 +73,66 @@ const RecipeDetail = () => {
               </div>
             </div>
             <div className="col-two">
-              {" "}<div className="recipe-info">
-                <div className="details">
-                  <p>
-                    <span>Category:</span> {recipe.strCategory}
-                  </p>
-                  <p>
-                    <span>Cook-Time:</span> 20min
-                  </p>
-                  <p>
-                    <span>Servings:</span> 2-3
-                  </p>
-                  <p>
-                    <span>Calories:</span> 22kcal
-                  </p>
+              <div className="main-reci">
+                {" "}<div className="recipe-info">
+                  <div className="details">
+                    <p>
+                      <span>Category:</span> {recipe.strCategory}
+                    </p>
+                    <p>
+                      <span>Cook-Time:</span> 20min
+                    </p>
+                    <p>
+                      <span>Servings:</span> 2-3
+                    </p>
+                    <p>
+                      <span>Calories:</span> 22kcal
+                    </p>
+                  </div>
                 </div>
+                
               </div>
-              <div className="ingredients">
-                <h3>Ingredients</h3>
-                <ul>
-                  {getIngredients(recipe).map((ingredient, index) =>
-                    <li key={index}>
-                      {ingredient}
-                    </li>
-                  )}
-                </ul>
+              <div className="main-ing">
+                <div className="ingredients">
+                  <h3>Ingredients</h3>
+                  <ul>
+                    {getIngredients(recipe).map((ingredient, index) =>
+                      <li key={index}>
+                        {ingredient}
+                      </li>
+                    )}
+                  </ul>
+                </div>
+                <div className="measure">
+                  <h3>Measurements</h3>
+                  <li>
+                    {recipe.strMeasure1}
+                  </li>
+                  <li>
+                    {recipe.strMeasure2}
+                  </li>
+                  <li>
+                    {recipe.strMeasure3}
+                  </li>
+                  <li>
+                    {recipe.strMeasure4}
+                  </li>
+                  <li>
+                    {recipe.strMeasure5}
+                  </li>
+                  <li>
+                    {recipe.strMeasure5}
+                  </li>
+                  <li>
+                    {recipe.strMeasure7}
+                  </li>
+                  <li>
+                    {recipe.strMeasure8}
+                  </li>
+                  <li>
+                    {recipe.strMeasure9}
+                  </li>
+                </div>
               </div>
               <div className="tips">
                 <h3>Tips:</h3>
