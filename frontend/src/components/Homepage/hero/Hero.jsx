@@ -17,11 +17,12 @@ const Hero = () => {
               A hive where recipes of different <br />
               continental dishes are found
             </p>
-            <button className="general_btn">
+            
               <Link to="/recipes" className="a">
+                <button className="general_btn">
                 <a>Get Started</a>
+                </button>
               </Link>
-            </button>
           </div>
           <div className="img_box">
             <img src="/images/hero.png" />
