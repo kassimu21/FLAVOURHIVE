@@ -34,7 +34,6 @@ const RecipeDetail = () => {
     }
     return ingredients;
   };
-
   console.log("details", recipe);
   return <div>
       <Navbar />
@@ -96,6 +95,26 @@ const RecipeDetail = () => {
                   )}
                 </ul>
               </div>
+              <div className="tips">
+                <h3>Tips:</h3>
+                <li>
+                  Make sure to use quality ingredients for all your
+                  dishes,look for authentic and natural products
+                </li>
+                <li>Work quickly and ensure all measurments are even</li>
+                <li>
+                  Have some backup measurements incase of any mistake or flaws
+                </li>
+              </div>
+              <div className="vid-sec">
+                <h3>
+                  {recipe.strMeal}
+                </h3>
+                <video width="560" height="315" controls>
+                  <source src={recipe.strYoutube} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
             </div>
           </div>
         </div>}
@@ -103,49 +122,3 @@ const RecipeDetail = () => {
 };
 
 export default RecipeDetail;
-
-
-
-// {recipe && (
-//         <div className="content">
-//           <div className="header">
-//             <h2 className="title">{recipe.strMeal}</h2>
-//           </div>
-//           <div className="recipe-info">
-//             <div className="image">
-//               <img src={recipe.strMealThumb} alt={recipe.strMeal} />
-//             </div>
-//             <div className="details">
-//               <p>
-//                 <strong>Category:</strong> {recipe.strCategory}
-//               </p>
-//               <p>
-//                 <strong>Cook-Time:</strong> 20min
-//               </p>
-//               <p>
-//                 <strong>Servings:</strong> 2-3
-//               </p>
-//               <p>
-//                 <strong>Calories:</strong> 22kcal
-//               </p>
-//             </div>
-//           </div>
-
-//           <div className="ingredients">
-//             <h3>Ingredients</h3>
-//             <ul>
-//               {getIngredients(recipe).map((ingredient, index) => (
-//                 <li key={index}>{ingredient}</li>
-//               ))}
-//             </ul>
-//           </div>
-
-//           <div className="instructions">
-//             <h3>Instructions</h3>
-//             <p>{recipe.strInstructions}</p>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
