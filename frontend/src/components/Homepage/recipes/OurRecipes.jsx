@@ -26,7 +26,7 @@ const OurRecipes = () => {
                 <img src='/images/leaf-header.png'/>
             </div>
              <h2>Our Recipes</h2>
-            <p className='header'>Fuel your body, delight your palate with the taste of doofness in every recipe </p>
+            <p className='header-o'>Fuel your body, delight your palate with the taste of doofness in every recipe </p>
             <div className="recipe_flex">
                 {recipes.map((item) => (
                     <div className="card">
