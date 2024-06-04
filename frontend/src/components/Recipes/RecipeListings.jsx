@@ -8,6 +8,8 @@ import {
   fetchMealAreas,
   fetchMealsByArea,
   fetchMealsBySearch,
+  fetchMealsIngredients,
+  fetchMealsByIngredient,
 } from "../../API/api";
 import Navbar from "../Navbar";
 import "./styles.scss";
@@ -16,25 +18,32 @@ const RecipeListing = () => {
   const { recipes, setRecipes, loading } = useContext(RecipesContext);
   const [categories, setCategories] = useState([]);
   const [areas, setAreas] = useState([]);
+  const [ingredients, setIngredients] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [categoryLoading, setCategoryLoading] = useState(false);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const getCategoriesAndAreas = async () => {
+    const getCategoriesAreasAndIngredients = async () => {
       try {
         const categoriesData = await fetchMealCategories();
         setCategories(categoriesData);
 
         const areasData = await fetchMealAreas();
         setAreas(areasData);
+
+        const ingredientsData = await fetchMealsIngredients();
+        setIngredients(ingredientsData);
       } catch (error) {
-        console.error("Error fetching categories and areas:", error);
+        console.error(
+          "Error fetching categories, areas, and ingredients:",
+          error
+        );
       }
     };
 
-    getCategoriesAndAreas();
+    getCategoriesAreasAndIngredients();
   }, []);
 
   const handleCategoryChange = async (event) => {
@@ -66,6 +75,26 @@ const RecipeListing = () => {
         setRecipes(meals);
       } catch (error) {
         console.error(`Error fetching meals for area ${area}:`, error);
+      }
+      setCategoryLoading(false);
+    }
+  };
+
+  const handleIngredientChange = async (event) => {
+    const ingredient = event.target.value;
+    setCategoryLoading(true);
+
+    if (ingredient === "All") {
+      handleAllClick();
+    } else {
+      try {
+        const meals = await fetchMealsByIngredient(ingredient);
+        setRecipes(meals);
+      } catch (error) {
+        console.error(
+          `Error fetching meals for ingredient ${ingredient}:`,
+          error
+        );
       }
       setCategoryLoading(false);
     }
@@ -112,25 +141,7 @@ const RecipeListing = () => {
       {loading && "Loading ..."}
       <h2>Explore different recipes</h2>
 
-      <div className="filter_wrapper">
-        <select onChange={handleCategoryChange} defaultValue="All">
-          <option value="All">All Categories</option>
-          {categories.map((category) => (
-            <option key={category.idCategory} value={category.strCategory}>
-              {category.strCategory}
-            </option>
-          ))}
-        </select>
-
-        <select onChange={handleAreaChange} defaultValue="All">
-          <option value="All">All Areas</option>
-          {areas.map((area) => (
-            <option key={area.strArea} value={area.strArea}>
-              {area.strArea}
-            </option>
-          ))}
-        </select>
-
+      <div className="search_wrapper">
         <form onSubmit={handleSearchSubmit}>
           <input
             type="text"
@@ -142,9 +153,39 @@ const RecipeListing = () => {
         </form>
       </div>
       <div className="filter_wrapper">
-        {categoryLoading && "Loading meals..."}
-      </div>
+        <div className="filters">
+          <select onChange={handleCategoryChange} defaultValue="All">
+            <option value="All">All Categories</option>
+            {categories.map((category) => (
+              <option key={category.idCategory} value={category.strCategory}>
+                {category.strCategory}
+              </option>
+            ))}
+          </select>
 
+          <select onChange={handleAreaChange} defaultValue="All">
+            <option value="All">All Areas</option>
+            {areas.map((area) => (
+              <option key={area.strArea} value={area.strArea}>
+                {area.strArea}
+              </option>
+            ))}
+          </select>
+
+          <select onChange={handleIngredientChange} defaultValue="All">
+            <option value="All">All Ingredients</option>
+            {ingredients.map((ingredient) => (
+              <option
+                key={ingredient.idIngredient}
+                value={ingredient.strIngredient}
+              >
+                {ingredient.strIngredient}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
+      <div className="loader">{categoryLoading && "Loading meals..."}</div>
       <div className="recipe_wrapper">
         {recipes.map((item) => (
           <div

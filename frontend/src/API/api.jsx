@@ -85,3 +85,25 @@ export const fetchRecipeById = async (id) => {
   const data = await response.json();
   return data.meals[0];
 };
+
+export const fetchMealsIngredients = async () => {
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/list.php?i=list`
+  );
+  if (!response.ok) {
+    throw new Error("Failed to fetch meal ingredients");
+  }
+  const data = await response.json();
+  return data.meals || [];
+};
+
+export const fetchMealsByIngredient = async (ingredient) => {
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
+  );
+  if (!response.ok) {
+    throw new Error(`Failed to fetch meals for ingredient ${ingredient}`);
+  }
+  const data = await response.json();
+  return data.meals || [];
+};

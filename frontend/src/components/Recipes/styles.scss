@@ -1,12 +1,63 @@
+@use '../../styles/index' as *;
+
+
 .pd_recipe_listing{
   padding-top: 120px;
     h2{
         text-align: center;
+        font-size: 38px;margin: 3rem 0;
+
     }
     .filter_wrapper{
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      border: 1px solid var(--primary);
+      border-right: none;
+      border-left: none;
+      justify-content: space-between;
+      padding: 1rem 0;
+      .filters{
+        
+        select{
+          border: none;
+          outline: none;
+          margin: 0 1rem;
+        }
+      }
+    
+    }
+    .search_wrapper{
       width: 100%;
       display: flex;
       justify-content: center;
+      margin: 2rem 0;
+      input{
+        width: 200px;
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--grey01);
+        border-radius: 4px;
+        &:focus{
+          border-color: var(--primary);
+        }
+      }
+      button{
+        border: none;
+        outline: none;
+        padding: 10px 2rem;
+        background-color: var(--orange);
+        border-radius: 4px;
+        cursor: progress;
+        &:hover{
+          background-color: orange;
+        }
+      }
+    }
+    .loader{
+      text-align: center;
+      margin: 1rem 0;
+      font-size: 34px;
     }
     .recipe_wrapper{
         width: 80%;
