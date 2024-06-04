@@ -180,7 +180,7 @@ const RecipeDetail = () => {
                   {recipe.strMeal}
                 </h3>
                 <video width="560" height="315" controls>
-                  <source src={recipe.strYoutube} type="video/mp4" />
+                  <source src={recipe.strYoutube} type="video/mpeg" />
                   Your browser does not support the video tag.
                 </video>
               </div>
