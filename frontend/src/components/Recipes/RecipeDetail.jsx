@@ -97,19 +97,27 @@ const RecipeDetail = () => {
                   <div className="inner-cons">
                     <div className="cons">
                       <FiFacebook className="fi" />
-                      <p>Facebook</p>
+                      <a href="www.facebook lite.com">
+                        <p>Facebook</p>
+                      </a>
                     </div>
                     <div className="cons">
                       <FiInstagram className="fi" />
-                      <p>Instagram</p>
+                      <a href="www.instagram.com">
+                        <p>Instagram</p>
+                      </a>
                     </div>
                     <div className="cons">
                       <FiLinkedin className="fi" />
+                      <a href="www.linkedin.com">
                       <p>Linkedin</p>
+                      </a>
                     </div>
                     <div className="cons">
                       <FiTwitter className="fi" />
+                      <a href="www.twitter.com">
                       <p>Twitter</p>
+                      </a>
                     </div>
                   </div>
                 </div>

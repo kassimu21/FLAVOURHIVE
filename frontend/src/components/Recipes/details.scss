@@ -85,14 +85,14 @@
     border-radius: 5px;
     width: 50%;
     // border: 1px solid #000;
-    background-color: rgba(238, 206, 168, 0.51);
+    background-color: rgba(23, 206, 168, 0.51);
     margin-left: 3rem;
   }
   .inner-cons{
      display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
   .cons{
     display: flex;
@@ -101,7 +101,12 @@
     align-items: center;
          .fi{
           font-size: 20px;
-          color: black;
+          color: #333;
+         }
+         a{
+          text-decoration: none;
+          color: #333;
+          cursor: pointer;
          }
      p{
       margin-left: 1rem;
