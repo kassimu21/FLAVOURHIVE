@@ -12,22 +12,25 @@ const RecipeDetail = () => {
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const getRecipe = async () => {
-      try {
-        const data = await fetchRecipeById(id);
-        setRecipe(data);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  useEffect(
+    () => {
+      const getRecipe = async () => {
+        try {
+          const data = await fetchRecipeById(id);
+          setRecipe(data);
+        } catch (error) {
+          console.error(error);
+        } finally {
+          setLoading(false);
+        }
+      };
 
-    getRecipe();
-  }, [id]);
+      getRecipe();
+    },
+    [id]
+  );
 
-  const getIngredients = (recipe) => {
+  const getIngredients = recipe => {
     const ingredients = [];
     for (let i = 1; i <= 20; i++) {
       const ingredient = recipe[`strIngredient${i}`];
@@ -90,7 +93,26 @@ const RecipeDetail = () => {
                     </p>
                   </div>
                 </div>
-                
+                <div className="social-icons">
+                  <div className="inner-cons">
+                    <div className="cons">
+                      <FiFacebook className="fi" />
+                      <p>Facebook</p>
+                    </div>
+                    <div className="cons">
+                      <FiInstagram className="fi" />
+                      <p>Instagram</p>
+                    </div>
+                    <div className="cons">
+                      <FiLinkedin className="fi" />
+                      <p>Linkedin</p>
+                    </div>
+                    <div className="cons">
+                      <FiTwitter className="fi" />
+                      <p>Twitter</p>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="main-ing">
                 <div className="ingredients">
