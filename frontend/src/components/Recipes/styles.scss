@@ -1,6 +1,12 @@
 .pd_recipe_listing{
+  padding-top: 120px;
     h2{
         text-align: center;
+    }
+    .filter_wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: center;
     }
     .recipe_wrapper{
         width: 80%;
