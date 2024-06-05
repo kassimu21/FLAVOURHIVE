@@ -47,11 +47,9 @@ const RecipeDetail = () => {
     const urlObj = new URL(url);
     return urlObj.searchParams.get("v");
   };
-  return (
-    <div>
+  return <div>
       <Navbar />
-      {recipe &&
-        <div className="content">
+      {recipe && <div className="content">
           <div className="inn-con">
             <div className="col-one">
               <div className="header">
@@ -70,9 +68,9 @@ const RecipeDetail = () => {
                 <h3>Jump To Recipe</h3>
                 <p>
                   Our Recipes are equipped with the finest instructions and
-                  guide, make sure every instructions are taken keenly to yield
-                  optimum results, whether a novice, intermidiate or a pro, your
-                  results would be spectacular.
+                  guide, make sure every instructions are taken keenly to
+                  yield optimum results, whether a novice, intermidiate or a
+                  pro, your results would be spectacular.
                 </p>
               </div>
               <div className="instructions">
@@ -131,6 +129,7 @@ const RecipeDetail = () => {
               </div>
               <div className="main-ing">
                 <div className="ingredients">
+                 <div className="ing-inner">
                   <h3>Ingredients</h3>
                   <ul>
                     {getIngredients(recipe).map((ingredient, index) =>
@@ -139,52 +138,14 @@ const RecipeDetail = () => {
                       </li>
                     )}
                   </ul>
-                </div>
-                <div className="measure">
-                  <h3>Measurements</h3>
-                  <li>
-                    {recipe.strMeasure1}
-                  </li>
-                  <li>
-                    {recipe.strMeasure2}
-                  </li>
-                  <li>
-                    {recipe.strMeasure3}
-                  </li>
-                  <li>
-                    {recipe.strMeasure4}
-                  </li>
-                  <li>
-                    {recipe.strMeasure5}
-                  </li>
-                  <li>
-                    {recipe.strMeasure5}
-                  </li>
-                  <li>
-                    {recipe.strMeasure7}
-                  </li>
-                  <li>
-                    {recipe.strMeasure8}
-                  </li>
-                  <li>
-                    {recipe.strMeasure9}
-                  </li>
-                  <li>
-                    {recipe.strMeasure10}
-                  </li>
-                  <li>
-                    {recipe.strMeasure11}
-                  </li>
-                  <li>
-                    {recipe.strMeasure12}
-                  </li>
+                  </div>
                 </div>
               </div>
               <div className="tips">
                 <h3>Tips:</h3>
                 <li>
-                  Make sure to use quality ingredients for all your dishes,look
-                  for authentic and natural products
+                  Make sure to use quality ingredients for all your
+                  dishes,look for authentic and natural products
                 </li>
                 <li>Work quickly and ensure all measurments are even</li>
                 <li>
@@ -195,25 +156,13 @@ const RecipeDetail = () => {
                 <h3>
                   {recipe.strMeal}
                 </h3>
-                {recipe.strYoutube &&
-                  <iframe
-                    width="560"
-                    height="315"
-                    src={`https://www.youtube.com/embed/${getYoutubeVideoId(
-                      recipe.strYoutube
-                    )}?si=IzIWzHfE0fhcDqtO`}
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />}
+
+                {recipe.strYoutube && <iframe width="560" height="315" src={`https://www.youtube.com/embed/${getYoutubeVideoId(recipe.strYoutube)}?si=IzIWzHfE0fhcDqtO`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen />}
               </div>
             </div>
           </div>
         </div>}
-    </div>
-  );
+    </div>;
 };
 
 export default RecipeDetail;
