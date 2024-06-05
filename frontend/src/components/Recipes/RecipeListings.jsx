@@ -152,7 +152,7 @@ const RecipeListing = () => {
 
   return (
     <>
-      {!session ? (
+      {session ? (
         <Auth />
       ) : (
         <>
