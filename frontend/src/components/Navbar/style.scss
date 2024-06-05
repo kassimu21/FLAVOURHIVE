@@ -7,7 +7,6 @@
     padding-bottom: 25px;
     position: fixed;
     top: 0;
-
     &.d_fixed {
         background: white;
         box-shadow: 0 0 2px 0 #ced3da;
@@ -26,7 +25,7 @@
      
     }
     .logo{
-        // width: 40%;
+        cursor: pointer;
     }
     .menu_links{
         display: flex;
@@ -44,6 +43,9 @@
                 line-height: 22px;
                 cursor: pointer;
                 text-decoration: none;
+                &:hover{
+                    color: var(--primary);
+                }
             }
         }
         @include mq(640px){

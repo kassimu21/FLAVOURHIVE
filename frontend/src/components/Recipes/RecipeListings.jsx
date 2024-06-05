@@ -13,6 +13,9 @@ import {
 } from "../../API/api";
 import Navbar from "../Navbar";
 import "./styles.scss";
+import { supabase } from "../../supabaseClient";
+import Auth from "../Auth/Auth";
+import Footer from "../Footer";
 
 const RecipeListing = () => {
   const { recipes, setRecipes, loading } = useContext(RecipesContext);
@@ -23,6 +26,18 @@ const RecipeListing = () => {
   const [categoryLoading, setCategoryLoading] = useState(false);
 
   const navigate = useNavigate();
+
+  const [session, setSession] = useState(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setSession(session);
+    });
+
+    supabase.auth.onAuthStateChange((_event, session) => {
+      setSession(session);
+    });
+  }, []);
 
   useEffect(() => {
     const getCategoriesAreasAndIngredients = async () => {
@@ -136,75 +151,95 @@ const RecipeListing = () => {
   };
 
   return (
-    <div className="pd_recipe_listing">
-      <Navbar />
-      {loading && "Loading ..."}
-      <h2>Explore different recipes</h2>
+    <>
+      {!session ? (
+        <Auth />
+      ) : (
+        <>
+          <div className="pd_recipe_listing">
+            {loading ? (
+              <div className="loader">{"Loading meals..."}</div>
+            ) : (
+              <>
+                <Navbar />
+                <h2>Explore different recipes</h2>
 
-      <div className="search_wrapper">
-        <form onSubmit={handleSearchSubmit}>
-          <input
-            type="text"
-            value={searchTerm}
-            onChange={handleSearchChange}
-            placeholder="Search for a recipe..."
-          />
-          <button type="submit">Search</button>
-        </form>
-      </div>
-      <div className="filter_wrapper">
-        <div className="filters">
-          <select onChange={handleCategoryChange} defaultValue="All">
-            <option value="All">All Categories</option>
-            {categories.map((category) => (
-              <option key={category.idCategory} value={category.strCategory}>
-                {category.strCategory}
-              </option>
-            ))}
-          </select>
+                <div className="search_wrapper" id="top">
+                  <form onSubmit={handleSearchSubmit}>
+                    <input
+                      type="text"
+                      value={searchTerm}
+                      onChange={handleSearchChange}
+                      placeholder="Search for a recipe..."
+                    />
+                    <button type="submit">Search</button>
+                  </form>
+                </div>
+                <div className="filter_wrapper">
+                  <div className="filters">
+                    <select onChange={handleCategoryChange} defaultValue="All">
+                      <option value="All">All Categories</option>
+                      {categories.map((category) => (
+                        <option
+                          key={category.idCategory}
+                          value={category.strCategory}
+                        >
+                          {category.strCategory}
+                        </option>
+                      ))}
+                    </select>
 
-          <select onChange={handleAreaChange} defaultValue="All">
-            <option value="All">All Areas</option>
-            {areas.map((area) => (
-              <option key={area.strArea} value={area.strArea}>
-                {area.strArea}
-              </option>
-            ))}
-          </select>
+                    <select onChange={handleAreaChange} defaultValue="All">
+                      <option value="All">All Areas</option>
+                      {areas.map((area) => (
+                        <option key={area.strArea} value={area.strArea}>
+                          {area.strArea}
+                        </option>
+                      ))}
+                    </select>
 
-          <select onChange={handleIngredientChange} defaultValue="All">
-            <option value="All">All Ingredients</option>
-            {ingredients.map((ingredient) => (
-              <option
-                key={ingredient.idIngredient}
-                value={ingredient.strIngredient}
-              >
-                {ingredient.strIngredient}
-              </option>
-            ))}
-          </select>
-        </div>
-      </div>
-      <div className="loader">{categoryLoading && "Loading meals..."}</div>
-      <div className="recipe_wrapper">
-        {recipes.map((item) => (
-          <div
-            className="card"
-            key={item.idMeal}
-            onClick={() => handleCardClick(item.idMeal)}
-          >
-            <div className="upper">
-              <img src={item.strMealThumb} alt={item.strMeal} />
-            </div>
-            <div className="lower">
-              <p className="name">{item.strMeal}</p>
-              {/* Assuming item.description exists; if not, remove this line */}
-              <p className="desc">{item.description}</p>
-            </div>
+                    <select
+                      onChange={handleIngredientChange}
+                      defaultValue="All"
+                    >
+                      <option value="All">All Ingredients</option>
+                      {ingredients.map((ingredient) => (
+                        <option
+                          key={ingredient.idIngredient}
+                          value={ingredient.strIngredient}
+                        >
+                          {ingredient.strIngredient}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+                <div className="loader">
+                  {categoryLoading && "Loading meals..."}
+                </div>
+                <div className="recipe_wrapper">
+                  {recipes.map((item) => (
+                    <div
+                      className="card"
+                      key={item.idMeal}
+                      onClick={() => handleCardClick(item.idMeal)}
+                    >
+                      <div className="upper">
+                        <img src={item.strMealThumb} alt={item.strMeal} />
+                      </div>
+                      <div className="lower">
+                        <p className="name">{item.strMeal}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                <Footer />
+              </>
+            )}
           </div>
-        ))}
-      </div>
-    </div>
+        </>
+      )}
+    </>
   );
 };
 
