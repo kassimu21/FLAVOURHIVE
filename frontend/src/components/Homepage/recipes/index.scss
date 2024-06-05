@@ -2,20 +2,58 @@
 
 .pd_recipes {
     width: 80%;
-    margin: 80px auto;
+    margin: 10px auto;
     h2{
+        font-family: "Lexend Exa";
         font-size: 40px;
         font-weight: 700;
-        line-height: 52px;
+        line-height: 20px;
         text-align: center;
         padding: 0;
         margin: 0;
     }
-    .header{
+    .header-o{
         font-size: 20px;
         line-height: 32px;
         color: #9ca5ab;
         text-align: center;
+        font-family: "Lexend Exa";
+        margin-bottom: 5rem;
+        margin-top: 3rem;
+    }
+    .st-but{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+    .rec-but{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: var(--btngreen);
+        color: #fff;
+        height: 100%;
+        padding: 1rem 5rem;
+        font-size: 20px;
+        font-family: "inter";
+        font-weight: 400;
+        border-radius: 3px;
+        cursor: pointer;
+        a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+         &:hover{
+                    background-color: var(--primary);
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
     }
 
     .img_headar {
@@ -53,13 +91,15 @@
                     line-height: 28px;
                     text-decoration: underline;
                     text-align: center;
+                    font-family: "Lexend Exa";
                 }
                 .desc{
-                    font-size: 20px;
+                    font-size: 15px;
                     font-weight: 400;
-                    line-height: 32px;
+                    line-height: 25px;
                     color: #9ca5ab;
                     text-align: center;
+                    font-family: "Lexend Exa";
                 }
             }
           
