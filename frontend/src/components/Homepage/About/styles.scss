@@ -12,12 +12,13 @@
         margin: 0;
         padding: 0;
         .first{
-            font-weight: 600;
             text-decoration: underline;
+            font-family: "Holtwood One Sc";
         }
         .second{
             color: var(--primary);
             text-decoration: underline;
+            font-family: "Holtwood One Sc";
         }
         &.feat_header{
             font-size: 28px;
@@ -36,11 +37,17 @@
     }
     .general_btn{
         &.abt_btn{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
             background-color: var(--orange) !important;
         &:hover{
-            background-color: var(--white) !important;
-            border-color: var(--orange) !important;
-            color: var(--orange) !important;
+            background-color: #F4DE27 !important;
+            // background-color: var(--white) !important;
+            // border-color: var(--orange) !important;
+            // color: var(--orange) !important;
+            color: #fff;
         }
         }
         
