@@ -84,7 +84,9 @@ const AboutSection = () => {
               FlavorHive, we aim to transform cooking from a mundane task into a
               delightful experience for everyone.
             </p>
-            <button className="general_btn abt_btn">Github Repo</button>
+            <a href="https://github.com/kassimu21/FLAVOURHIVE" target="_blank">
+              <button className="general_btn abt_btn">Github Repo</button>
+            </a>
           </div>
           <div className="img_box">
             <img src="/images/second-seg.png" />

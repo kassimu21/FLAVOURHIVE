@@ -5,9 +5,7 @@ const Features = () => {
     <>
       <div className="pd_hero pd_about" id="features">
         <h2 className="title">Features</h2>
-        <p className="sub-title">
-          Uncover our story and get new insights about us
-        </p>
+        <p className="sub-title">What we're offering you</p>
         <div className="hero_flex">
           <div className="img_box">
             <img src="/images/left.png" />
@@ -17,13 +15,15 @@ const Features = () => {
               Discover a vast collection of recipes from around the world.
             </h4>
             <p>
-              Our homepage showcases a curated list of popular and trending
+              Our 300+ recipes showcases a curated list of popular and trending
               recipes, each with a title, image, and a brief description. Users
               can click on any recipe to view detailed instructions,
               ingredients, and preparation tips. Recipes are categorized by
               cuisine type and meal category for easy navigation.
             </p>
-            <button className="general_btn abt_btn">Discover</button>
+            <a href="/recipes">
+              <button className="general_btn abt_btn">Discover</button>
+            </a>
             <br />
           </div>
         </div>
@@ -33,12 +33,13 @@ const Features = () => {
               Each recipe page provides comprehensive details
             </h4>
             <p>
-              including a high-quality image of the dish, a list of ingredients,
-              step-by-step cooking instructions, and nutritional information.
-              Users can also find tips, user reviews, and related recipes for
-              further exploration.
+              Including a high-quality image of the dish, a list of ingredients,
+              step-by-step cooking instructions and tips. Users can also find
+              tips, ingredients and coooking guide
             </p>
-            <button className="general_btn abt_btn">Github Repo</button>
+            <a href="/recipes">
+              <button className="general_btn abt_btn">Discover</button>
+            </a>
           </div>
           <div className="img_box">
             <img src="/images/right.png" />
@@ -57,7 +58,9 @@ const Features = () => {
               link to share manually, ensuring recipients can access the recipe
               directly.
             </p>
-            <button className="general_btn abt_btn">Discover</button>
+            <a href="/recipes">
+              <button className="general_btn abt_btn">Discover</button>
+            </a>
             <br />
           </div>
         </div>

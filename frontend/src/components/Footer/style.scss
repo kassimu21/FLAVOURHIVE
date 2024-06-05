@@ -23,12 +23,15 @@
     flex-wrap: wrap;
 }
 
-.footer-logo h2 {
+.footer-logo h6 {
     margin: 0;
     font-size: 1.5rem;
+    cursor: pointer;
     span{
         color: var(--primary);
     }
+  
+
 }
 
 .footer-links a, .footer-social a {

@@ -16,13 +16,16 @@ const Navbar = () => {
     { name: "Home", link: "/" },
     { name: "About", link: "/#about" },
     { name: "Features", link: "/#features" },
+    { name: "Recipes", link: "/recipes" },
   ];
   return (
     <>
       <div className={`nav_wrapper ${scrollPosition > 0 ? "d_fixed" : ""}`}>
         <div className="nav">
           <div className="logo">
-            <img src="/images/logo-lg.png" />
+            <a href="/">
+              <img src="/images/logo-lg.png" />
+            </a>
           </div>
           <div className="menu_links">
             <div className="links">
@@ -31,9 +34,9 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          <div className="burger">
+          {/* <div className="burger">
             <img src="/images/menu.png" />
-          </div>
+          </div> */}
         </div>
       </div>
     </>

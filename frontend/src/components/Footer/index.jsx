@@ -5,26 +5,23 @@ const Footer = () => {
     <footer className="footer">
       <div className="container">
         <div className="footer-content">
-          <div className="footer-logo">
-            <h2>
-              Flavor<span>Hive</span>
-            </h2>
-          </div>
+          <a href="/">
+            <div className="footer-logo">
+              <h6>
+                Flavor<span>Hive</span>
+              </h6>
+            </div>
+          </a>
+
           <div className="footer-links">
             <a href="#about">About Us</a>
             <a href="#features">Features</a>
             <a href="/recipes">Recipes</a>
+            <a href="#top">Back To Top</a>
           </div>
           <div className="footer-social">
-            <a href="https://twitter.com/flavorhive" target="_blank">
-              Twitter
-            </a>
-            <a
-              href="https://www.linkedin.com/company/flavorhive"
-              target="_blank"
-            >
-              LinkedIn
-            </a>
+            <a href="/">Twitter</a>
+            <a href="/">LinkedIn</a>
             <a href="https://github.com/flavorhive" target="_blank">
               GitHub
             </a>
