@@ -1,7 +1,7 @@
-@use '../../../styles/index';
+@use '../../../styles/index' as *;
 .pd_hero{
     width: 100%;
-    height: auto;
+    margin-bottom: 40px;
     .absolut_leaf{
         position: absolute;
     }
@@ -19,6 +19,13 @@
         width: 80%;
         margin: auto;
         padding: 80px 0;
+
+        @include mq(820px){
+            flex-direction: column;
+            z-index: 10;
+            width: 100%;
+            padding: 40px 24px;
+        }
         .text_box{
             h1{
                 font-size: 62px;
@@ -26,18 +33,36 @@
                 color: var(--black01);
                 font-weight: bold;
                 font-family: 'Lexend Exa';
+                padding: 12px 0;
                 span{
                     color: var(--red);
+                }
+                @include mq(1028px){
+                    font-size: 38px;
+                    line-height: 46px;
+                }
+                
+            }
+            @include mq(640px){
+                z-index: 2;
+                br{
+                    display: none;
                 }
             }
             .hero-par{
                 color: #9ca5ab;
                 font-size: 20px;
                 line-height: 28px;
-                font-family: 'Lexend Deca';
+                padding: 10px 0;
+                @include mq(640px){
+                    color: var(--black01);
+                }
             }
             .general_btn{
-                background-color: var(--btngreen);
+                @include mq(480px){
+                    width: 100%;
+                }
+                background-color: var(--primary);
                 color: #fff;
                 appearance: none;
                 outline: none;
@@ -57,6 +82,16 @@
                         color: #fff;
                         
                     }
+                }
+            }
+        }
+        .img_box{
+            @include mq(640px){
+                width: 100%;
+                margin: 40px auto;
+
+                img{
+                    max-width: 100%;
                 }
             }
         }
