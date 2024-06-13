@@ -28,10 +28,15 @@ FlavorHive is your ultimate recipe haven, where you can discover, create, and sh
 ### Platform:
 - Web
 
-## Installation
-Follow these steps to set up Ijar locally on your machine:
+## Links
+Deployed app: https://flavourhive.vercel.app/
+Final blog article: https://medium.com/@sksallah45/flavourhive-recipe-web-app-a0303a5fe4e1
+Trello Board: https://trello.com/invite/b/3S4gZQHL/ATTI84e0d8467aaec67d61610e60891d168fD865DB18/flavourhive-recipe
 
-## Clone the Repository:
+## Installation
+follow this instruction
+
+clone the Repository:
 
 Open your terminal and run:
 git clone git@github.com:kassimu21/FLAVOURHIVE.git
