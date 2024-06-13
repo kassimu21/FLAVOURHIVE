@@ -1,4 +1,5 @@
 # FlavorHive
+![FINAL LANDING PAGE](https://github.com/kassimu21/FLAVOURHIVE/assets/111191569/259f1d9a-a18e-4922-9d1f-be04c6385986)
 
 ## What do we do?
 FlavorHive is your ultimate recipe haven, where you can discover, create, and share delicious moments. Our platform aims to solve various culinary challenges, including access to recipes, ingredient management, cooking guidance, and more. Whether you're a novice cook, a busy professional, a health-conscious individual, or a seasoned home chef, FlavorHive is designed to cater to your needs. With a user-friendly interface and a vast database of recipes from around the world, FlavorHive makes cooking easy, convenient, and enjoyable.
