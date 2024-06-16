@@ -54,7 +54,7 @@ const AboutSection = () => {
                   <div className="p_img">
                     <img src="images/felz.png" />
                   </div>
-                  <p className="name">Kassim Sallah</p>
+                  <p className="name">Kasimu Samaila</p>
                   <p className="role">Project Manager/Developer</p>
                   <div className="socials"></div>
                 </div>
