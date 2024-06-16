@@ -52,7 +52,7 @@ const AboutSection = () => {
                 </div>
                 <div className="card">
                   <div className="p_img">
-                    <img src="images/felz.png" />
+                    <img src="images/SK.png" />
                   </div>
                   <p className="name">Kasimu Samaila</p>
                   <p className="role">Project Manager/Developer</p>
